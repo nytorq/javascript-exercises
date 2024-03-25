@@ -9,18 +9,15 @@ const sumAll = function(val1, val2) {
         ) {
         result = "ERROR";
     } else {
-        // for (i = val1 ; i <= val2 ; i++) {
-        //     result += val1;
-        // }
-        /* PSEUDOCODE
-            - Determine which of the values is larger and Makes that the stopping point for the loop
-            - Make result equal to smaller value
-            - For loop:
-                - Start i at smaller value    
-                - Determine how many iterations to do  (larger val - smaller val + 1)
-                - Store current value as i
-                - 
-        */
+        if (val1 > val2) {
+            for (i = val2 ; i <= val1 ; i++) {
+                result += i;
+            }
+        } else {
+            for (i = val1 ; i <= val2 ; i++) {
+                result += i;
+            }
+        }
     } 
     return result
 };
